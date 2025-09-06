@@ -1,9 +1,14 @@
 name: Build Nextcloud Multi-Arch
 
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
 on:
-  pull_request:
-  workflow_run:
-    branches: [main]
+  push:
+    branches:
+      - main
 
 jobs:
   build:
